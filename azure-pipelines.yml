@@ -52,7 +52,7 @@ steps:
         "files": [
           {
             "pattern": "*.war",
-            "target": "c:\\"
+            "target": "C:\\"
           }
         ]
       }

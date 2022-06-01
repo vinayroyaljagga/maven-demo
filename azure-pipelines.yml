@@ -37,13 +37,23 @@ steps:
       {
         "files": [
           {
-            "pattern": "files/*.zip",
-            "target": "libs-generic-local/files/"
+            "pattern": "*.yml",
+            "target": "vinay-generic-local/"
           }
         ]
       }
-    collectBuildInfo: true
-    buildName: '$(Build.DefinitionName)'
-    buildNumber: '$(Build.BuildNumber)'
-    projectKey: 'AKCp8mZ8Dv2mc28B9embaLoURWRPZ9DBLH7fUBWu6acvf5q5xENsdbKw9R8nNiC1EZLhqEqEu'
+    failNoOp: true
+- task: ArtifactoryGenericDownload@3
+  inputs:
+    connection: 'JFrog_Service_Connection'
+    specSource: 'taskConfiguration'
+    fileSpec: |
+      {
+        "files": [
+          {
+            "pattern": "vinay-generic-local/",
+            "target": "c:\\cd\\"
+          }
+        ]
+      }
     failNoOp: true

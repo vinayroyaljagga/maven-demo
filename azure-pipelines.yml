@@ -52,7 +52,7 @@ steps:
         "files": [
           {
             "pattern": "vinay-generic-local/*.war",
-            "target": "C:\\"
+            "target": "C:\\tmp\\"
           }
         ]
       }

@@ -37,22 +37,8 @@ steps:
       {
         "files": [
           {
-            "pattern": "*.yml",
+            "pattern": "*.war",
             "target": "vinay-generic-local/"
-          }
-        ]
-      }
-    failNoOp: true
-- task: ArtifactoryGenericDownload@3
-  inputs:
-    connection: 'JFrog_Service_Connection'
-    specSource: 'taskConfiguration'
-    fileSpec: |
-      {
-        "files": [
-          {
-            "pattern": "vinay-generic-local/",
-            "target": "c:\\cd\\"
           }
         ]
       }

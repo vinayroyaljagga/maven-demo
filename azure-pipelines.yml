@@ -43,3 +43,17 @@ steps:
         ]
       }
     failNoOp: true
+- task: ArtifactoryGenericDownload@3
+  inputs:
+    connection: 'JFrog_Service_Connection'
+    specSource: 'taskConfiguration'
+    fileSpec: |
+      {
+        "files": [
+          {
+            "pattern": "*.war",
+            "target": "c:\\"
+          }
+        ]
+      }
+    failNoOp: true
